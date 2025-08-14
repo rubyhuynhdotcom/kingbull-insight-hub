@@ -32,9 +32,6 @@ const Navbar: React.FC<NavbarProps> = ({ activeSection, onSectionChange }) => {
             <h1 className="text-2xl font-bold text-primary tracking-tight">
               KINGBULL
             </h1>
-            <div className="hidden lg:block text-sm text-muted-foreground border-l border-border pl-4">
-              Đột phá tăng, dẫn đầu lợi nhuận
-            </div>
           </div>
 
           {/* Desktop Navigation */}

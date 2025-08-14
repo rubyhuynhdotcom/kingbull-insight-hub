@@ -59,7 +59,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ onSectionChange }) => {
               </h1>
               
               <p className="text-xl lg:text-2xl font-semibold text-profit">
-                "Đột phá tăng, dẫn đầu lợi nhuận"
+                "Đột phá tăng trưởng, dẫn đầu lợi nhuận"
               </p>
               
               <p className="text-lg text-white/90 leading-relaxed max-w-2xl">
