@@ -237,18 +237,9 @@ const Index = () => {
                     Hỗ trợ tài chính linh hoạt
                   </li>
                 </ul>
-                <Button 
-  size="lg"
-  variant="outline"
-  onClick={() => onSectionChange('support')}
-  className="bg-blue-500 text-white hover:bg-blue-600 backdrop-blur-sm text-lg px-8 py-6"
->
-  Liên hệ Hợp tác
-</Button>
-
-{/*                 <button className="w-full bg-profit text-profit-foreground py-3 rounded hover:bg-profit/90">
+                <button className="w-full bg-profit text-profit-foreground py-3 rounded hover:bg-profit/90">
                   Liên hệ Export
-                </button> */}
+                </button>
               </div>
             </div>
           </div>
