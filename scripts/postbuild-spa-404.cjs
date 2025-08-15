@@ -1,4 +1,3 @@
-// scripts/postbuild-spa-404.cjs
 const fs = require("fs");
 const path = require("path");
 

@@ -5,16 +5,12 @@ import { componentTagger } from "lovable-tagger";
 
 export default defineConfig(({ mode }) => {
   const isProd = mode === "production";
-  // Tự động phát hiện tên repo từ env hoặc fallback là kingbull-insight-hub
-  const repo = (process.env.VITE_GH_PAGES_BASE || "kingbull-insight-hub")
-    .replace(/^\/|\/$/g, "");
-
   return {
-    base: isProd ? `/${repo}/` : "/",
+    base: isProd ? "/kingbull-insight-hub/" : "/", // QUAN TRỌNG: tên repo
     plugins: [react(), mode === "development" && componentTagger()].filter(Boolean),
     resolve: { alias: { "@": path.resolve(__dirname, "./src") } },
     server: { host: "::", port: 8080 },
     preview: { port: 8080 },
-    build: { outDir: "docs", sourcemap: false }
+    build: { outDir: "docs", sourcemap: false } // build thẳng vào docs/
   };
 });
