@@ -1,85 +1,82 @@
-# KingBull Insight Hub
+# KINGBULL Insight Hub - Static Export
 
-KingBull Việt Nam - Thức ăn Thủy sản Chất lượng Cao | Đột phá tăng trưởng, dẫn đầu lợi nhuận
+Static HTML/CSS/JS build for GitHub Pages deployment.
 
-## Quick Deploy to GitHub Pages
+## 📁 Structure
 
-### For Lovable Users (One-Click)
-1. **Connect** → Connect your GitHub repo
-2. **Publish** → Deploy to GitHub Pages instantly
+```
+/
+├── index.html          # Main page
+├── 404.html           # SPA redirect
+├── .nojekyll          # Disable Jekyll
+├── css/
+│   └── styles.css     # Compiled styles
+├── js/
+│   └── app.js         # Vanilla JavaScript
+└── assets/
+    ├── favicon.svg    # Site icon
+    └── hero-aquafarm.jpg # Hero image
+```
 
-### Manual Deploy Steps
+## 🚀 Deploy to GitHub Pages
 
+### Method 1: Direct Upload
+1. Upload all files to your repo root
+2. Go to Settings → Pages
+3. Source: Deploy from a branch
+4. Branch: main / folder: / (root)
+
+### Method 2: Git Commands
 ```bash
-npm install
-npm run build
+git add .
+git commit -m "Deploy static build for GH Pages"
+git push origin main
 ```
 
-Push to GitHub, then:
-- Go to **Settings** → **Pages** 
-- Source: **Deploy from a branch**
-- Branch: **main** / **docs**
-- URL: `https://rubyhuynhdotcom.github.io/kingbull-insight-hub/`
+## ✅ Compatibility
 
-### Scripts
+- ✅ Pure HTML/CSS/JS (no bundler runtime)
+- ✅ Relative paths only
+- ✅ Works with `file://` protocol
+- ✅ Mobile responsive
+- ✅ SPA routing with 404.html redirect
+- ✅ GitHub Pages optimized
 
-```bash
-npm run dev          # Development server
-npm run build        # Build for production (includes SPA setup)
-npm run build:dev    # Build for development
-npm run preview      # Preview production build
-npm run lint         # Run ESLint
-```
+## 🎯 Features
 
-### Custom Domain Setup
+- Interactive case studies with detailed breakdowns
+- Technical library section
+- Factory video showcase
+- Dealer portal information
+- Supply map visualization
+- 24/7 support contact forms
+- Smooth scroll navigation
+- Mobile-first responsive design
 
-If using custom domain:
-1. Add `docs/CNAME` file with your domain
-2. Change `base: "/"` in `vite.config.ts`
+## 📱 Browser Support
 
-### Technology Stack
+- Chrome/Safari/Firefox/Edge (modern browsers)
+- Mobile Safari/Chrome
+- Internet Explorer 11+ (with polyfills)
 
-- **Vite** - Fast build tool and dev server
-- **React 18** - UI library with modern hooks
-- **TypeScript** - Type safety and enhanced DX
-- **Tailwind CSS** - Utility-first CSS with custom design system
-- **shadcn/ui** - Accessible React components
+## 🔧 Customization
 
-### Project Structure
+Edit files directly:
+- `index.html` - Content structure
+- `css/styles.css` - Styling and design system
+- `js/app.js` - Interactive functionality
+- `assets/` - Images and media
 
-```
-src/
-├── components/         # UI components
-│   ├── ui/            # shadcn/ui components
-│   ├── Navbar.tsx     # Navigation
-│   ├── HeroSection.tsx # Hero banner
-│   └── CaseStudiesSection.tsx # Case studies
-├── pages/             # Page components
-├── assets/            # Images and media
-└── index.css          # Global styles
-```
+## 📈 Performance
 
-### Build Output
-
-After `npm run build`:
-- ✅ `docs/` folder created
-- ✅ `docs/404.html` for SPA routing
-- ✅ `docs/.nojekyll` to disable Jekyll
-- ✅ All assets use correct base path `/kingbull-insight-hub/`
-
-## Live Site
-
-🚀 **Deployed at:** [https://rubyhuynhdotcom.github.io/kingbull-insight-hub/](https://rubyhuynhdotcom.github.io/kingbull-insight-hub/)
+- Optimized CSS (single file)
+- Vanilla JS (no frameworks)
+- Compressed images
+- Minimal HTTP requests
+- Fast loading on all devices
 
 ---
 
-## Development Notes
+**Live URL:** `https://[username].github.io/[repo-name]/`
 
-**Note:** This project requires manual update of package.json scripts:
-```json
-{
-  "scripts": {
-    "build": "vite build && node scripts/postbuild-spa-404.cjs"
-  }
-}
-```
+Built for KingBull Việt Nam - Premium Aquaculture Feed Solutions
