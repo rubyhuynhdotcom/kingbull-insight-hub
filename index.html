@@ -1,25 +1,580 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>KingBull Việt Nam - Thức ăn Thủy sản Chất lượng Cao | Đột phá tăng, dẫn đầu lợi nhuận</title>
-    <meta name="description" content="KingBull Việt Nam - Nhà cung cấp thức ăn thủy sản B2B hàng đầu. FCR thấp, ROI cao, hỗ trợ kỹ thuật 24/7. Đối tác tin cậy của 500+ trang trại nuôi tôm cá." />
-    <meta name="author" content="KingBull Vietnam" />
-    <meta name="keywords" content="thức ăn thủy sản, aquafeed, kingbull vietnam, nuôi tôm, nuôi cá tra, FCR thấp, tư vấn kỹ thuật" />
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KingBull Việt Nam - Thức ăn Thủy sản Chất lượng Cao | Đột phá tăng, dẫn đầu lợi nhuận</title>
+  <meta name="description" content="KingBull Việt Nam - Nhà cung cấp thức ăn thủy sản B2B hàng đầu. FCR thấp, ROI cao, hỗ trợ kỹ thuật 24/7. Đối tác tin cậy của 500+ trang trại nuôi tôm cá.">
+  <meta name="author" content="KingBull Vietnam">
+  <meta name="keywords" content="thức ăn thủy sản, aquafeed, kingbull vietnam, nuôi tôm, nuôi cá tra, FCR thấp, tư vấn kỹ thuật">
+  
+  <meta property="og:title" content="KingBull Việt Nam - Thức ăn Thủy sản Chất lượng Cao">
+  <meta property="og:description" content="Nhà cung cấp thức ăn thủy sản B2B hàng đầu Việt Nam. FCR thấp, ROI cao, hỗ trợ kỹ thuật 24/7 cho các trang trại nuôi tôm cá quy mô lớn.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="./assets/hero-aquafarm.jpg">
+  
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="./assets/hero-aquafarm.jpg">
+  
+  <link rel="icon" href="./assets/favicon.svg">
+  <link rel="stylesheet" href="./css/styles.css">
+  <link rel="preconnect" href="https://unpkg.com">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16">
+        <!-- Logo -->
+        <div class="flex items-center">
+          <div class="text-2xl font-bold text-primary">KINGBULL</div>
+        </div>
+        
+        <!-- Desktop Menu -->
+        <div class="hidden lg:flex items-center space-x-8">
+          <a href="#home" class="nav-link text-sm font-medium text-foreground hover:text-primary transition-colors">Trang chủ</a>
+          <a href="#case-studies" class="nav-link text-sm font-medium text-foreground hover:text-primary transition-colors">Dự án Thành công</a>
+          <a href="#technical-library" class="nav-link text-sm font-medium text-foreground hover:text-primary transition-colors">Thư viện Kỹ thuật</a>
+          <a href="#factory-video" class="nav-link text-sm font-medium text-foreground hover:text-primary transition-colors">Video Nhà máy</a>
+          <a href="#dealer-portal" class="nav-link text-sm font-medium text-foreground hover:text-primary transition-colors">Portal Đại lý</a>
+          <a href="#supply-map" class="nav-link text-sm font-medium text-foreground hover:text-primary transition-colors">Bản đồ Cung ứng</a>
+          <a href="#support" class="nav-link text-sm font-medium text-foreground hover:text-primary transition-colors">Hỗ trợ 24/7</a>
+          <a href="#logistics" class="nav-link text-sm font-medium text-foreground hover:text-primary transition-colors">Logistics</a>
+          <a href="#news" class="nav-link text-sm font-medium text-foreground hover:text-primary transition-colors">Tin tức</a>
+          <a href="#rd-cooperation" class="nav-link text-sm font-medium text-foreground hover:text-primary transition-colors">Hợp tác R&D</a>
+        </div>
 
-    <meta property="og:title" content="KingBull Việt Nam - Thức ăn Thủy sản Chất lượng Cao" />
-    <meta property="og:description" content="Nhà cung cấp thức ăn thủy sản B2B hàng đầu Việt Nam. FCR thấp, ROI cao, hỗ trợ kỹ thuật 24/7 cho các trang trại nuôi tôm cá quy mô lớn." />
-    <meta property="og:type" content="website" />
-    <meta property="og:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+        <!-- Mobile Menu Button -->
+        <button id="mobile-menu-btn" class="lg:hidden p-2 rounded-md text-foreground hover:text-primary hover:bg-accent">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
 
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:site" content="@lovable_dev" />
-    <meta name="twitter:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
-  </head>
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="lg:hidden hidden bg-background border-t border-border">
+      <div class="px-4 py-4 space-y-2">
+        <a href="#home" class="block px-3 py-2 text-base font-medium text-foreground hover:text-primary hover:bg-accent rounded-md">Trang chủ</a>
+        <a href="#case-studies" class="block px-3 py-2 text-base font-medium text-foreground hover:text-primary hover:bg-accent rounded-md">Dự án Thành công</a>
+        <a href="#technical-library" class="block px-3 py-2 text-base font-medium text-foreground hover:text-primary hover:bg-accent rounded-md">Thư viện Kỹ thuật</a>
+        <a href="#factory-video" class="block px-3 py-2 text-base font-medium text-foreground hover:text-primary hover:bg-accent rounded-md">Video Nhà máy</a>
+        <a href="#dealer-portal" class="block px-3 py-2 text-base font-medium text-foreground hover:text-primary hover:bg-accent rounded-md">Portal Đại lý</a>
+        <a href="#supply-map" class="block px-3 py-2 text-base font-medium text-foreground hover:text-primary hover:bg-accent rounded-md">Bản đồ Cung ứng</a>
+        <a href="#support" class="block px-3 py-2 text-base font-medium text-foreground hover:text-primary hover:bg-accent rounded-md">Hỗ trợ 24/7</a>
+        <a href="#logistics" class="block px-3 py-2 text-base font-medium text-foreground hover:text-primary hover:bg-accent rounded-md">Logistics</a>
+        <a href="#news" class="block px-3 py-2 text-base font-medium text-foreground hover:text-primary hover:bg-accent rounded-md">Tin tức</a>
+        <a href="#rd-cooperation" class="block px-3 py-2 text-base font-medium text-foreground hover:text-primary hover:bg-accent rounded-md">Hợp tác R&D</a>
+      </div>
+    </div>
+  </nav>
 
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+  <!-- Main Content -->
+  <main class="pt-16">
+    <!-- Hero Section -->
+    <section id="home" class="relative min-h-screen flex items-center justify-center overflow-hidden">
+      <!-- Background Image with Overlay -->
+      <div class="absolute inset-0">
+        <img src="./assets/hero-aquafarm.jpg" alt="KingBull Aquafarm Success" class="w-full h-full object-cover">
+        <div class="absolute inset-0 bg-gradient-to-r from-primary/90 via-primary/70 to-transparent"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-background/30 to-transparent"></div>
+      </div>
+
+      <!-- Content -->
+      <div class="relative z-10 container mx-auto px-4 py-20">
+        <div class="grid lg:grid-cols-2 gap-12 items-center">
+          <!-- Left Content -->
+          <div class="text-white space-y-8">
+            <div class="space-y-4">
+              <div class="inline-flex items-center bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-4 py-2 text-sm font-medium">
+                <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+                </svg>
+                Tin cậy từ các trang trại hàng đầu Việt Nam
+              </div>
+              
+              <h1 class="text-5xl lg:text-7xl font-bold leading-tight">
+                <span class="block">KINGBULL</span>
+                <span class="block text-profit bg-gradient-to-r from-profit to-growth bg-clip-text text-transparent">
+                  VIỆT NAM
+                </span>
+              </h1>
+              
+              <p class="text-xl lg:text-2xl font-semibold text-profit">
+                "Đột phá tăng trưởng, dẫn đầu lợi nhuận"
+              </p>
+              
+              <p class="text-lg text-white/90 leading-relaxed max-w-2xl">
+                Công ty TNHH KingBull Việt Nam - Nhà cung cấp thức ăn thủy sản chất lượng cao, 
+                hỗ trợ trang trại đạt hiệu quả nuôi tối ưu với FCR thấp và lợi nhuận vượt trội.
+              </p>
+            </div>
+
+            <!-- CTA Buttons -->
+            <div class="flex flex-col sm:flex-row gap-4">
+              <a href="#case-studies" class="inline-flex items-center justify-center px-8 py-6 text-lg font-medium rounded-lg bg-growth hover:bg-growth/90 text-growth-foreground shadow-lg hover:shadow-xl transition-all duration-300">
+                Xem Hồ sơ Dự án Thành công
+                <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                </svg>
+              </a>
+              
+              <a href="#support" class="inline-flex items-center justify-center px-8 py-6 text-lg font-medium rounded-lg border border-white/30 text-white hover:bg-white/10 backdrop-blur-sm transition-all duration-300">
+                Liên hệ Hợp tác
+              </a>
+            </div>
+          </div>
+
+          <!-- Right Content - Benefits -->
+          <div class="space-y-6">
+            <div class="p-6 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white hover:bg-white/20 transition-all duration-300 interactive-card" style="animation-delay: 0s">
+              <div class="flex items-start space-x-4">
+                <div class="flex-shrink-0">
+                  <div class="w-12 h-12 bg-profit rounded-xl flex items-center justify-center">
+                    <svg class="w-6 h-6 text-profit-foreground" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path>
+                    </svg>
+                  </div>
+                </div>
+                <div class="flex-1">
+                  <h3 class="text-xl font-semibold mb-2">Năng lực cung ứng lớn</h3>
+                  <p class="text-white/80 leading-relaxed">Nhà máy hiện đại, sản xuất quy mô công nghiệp</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="p-6 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white hover:bg-white/20 transition-all duration-300 interactive-card" style="animation-delay: 0.2s">
+              <div class="flex items-start space-x-4">
+                <div class="flex-shrink-0">
+                  <div class="w-12 h-12 bg-profit rounded-xl flex items-center justify-center">
+                    <svg class="w-6 h-6 text-profit-foreground" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path>
+                    </svg>
+                  </div>
+                </div>
+                <div class="flex-1">
+                  <h3 class="text-xl font-semibold mb-2">Tối ưu lợi nhuận</h3>
+                  <p class="text-white/80 leading-relaxed">FCR thấp, tăng trọng nhanh, ROI vượt trội</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="p-6 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white hover:bg-white/20 transition-all duration-300 interactive-card" style="animation-delay: 0.4s">
+              <div class="flex items-start space-x-4">
+                <div class="flex-shrink-0">
+                  <div class="w-12 h-12 bg-profit rounded-xl flex items-center justify-center">
+                    <svg class="w-6 h-6 text-profit-foreground" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192L5.636 18.364M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z"></path>
+                    </svg>
+                  </div>
+                </div>
+                <div class="flex-1">
+                  <h3 class="text-xl font-semibold mb-2">Hỗ trợ kỹ thuật 24/7</h3>
+                  <p class="text-white/80 leading-relaxed">Đội ngũ chuyên gia sẵn sàng tư vấn mọi lúc</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Quick Stats -->
+            <div class="p-6 bg-gradient-to-r from-growth/90 to-profit/90 backdrop-blur-sm border border-white/20 rounded-lg text-white">
+              <div class="grid grid-cols-3 gap-4 text-center">
+                <div>
+                  <div class="text-2xl font-bold">500+</div>
+                  <div class="text-sm opacity-90">Trang trại hợp tác</div>
+                </div>
+                <div>
+                  <div class="text-2xl font-bold">1.2</div>
+                  <div class="text-sm opacity-90">FCR trung bình</div>
+                </div>
+                <div>
+                  <div class="text-2xl font-bold">35%+</div>
+                  <div class="text-sm opacity-90">Tăng lợi nhuận</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Scroll Indicator -->
+      <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+        <div class="w-6 h-10 border-2 border-white/50 rounded-full flex justify-center">
+          <div class="w-1 h-3 bg-white/70 rounded-full mt-2 animate-pulse"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Case Studies Section -->
+    <section id="case-studies" class="py-20 bg-gradient-to-b from-background to-muted">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-16">
+          <div class="inline-block bg-primary-soft text-primary px-3 py-1 rounded-full text-sm font-medium mb-4">Dự án Thành công</div>
+          <h2 class="text-4xl lg:text-5xl font-bold mb-6">
+            Hồ sơ <span class="text-primary">Dự án Nuôi</span> Thành công
+          </h2>
+          <p class="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+            Khám phá những câu chuyện thành công từ các trang trại đối tác, 
+            với dữ liệu ROI chi tiết và lời chứng thực từ chủ trại.
+          </p>
+        </div>
+
+        <div class="grid lg:grid-cols-3 gap-8 mb-12">
+          <!-- Case Study Cards -->
+          <div class="case-study-card bg-card border border-border rounded-lg p-6 cursor-pointer transition-all duration-300 hover:shadow-lg hover:-translate-y-1" data-case="1">
+            <div class="mb-4">
+              <h3 class="text-xl font-semibold mb-2">Trang trại Cá Tra - An Giang</h3>
+              <div class="flex items-center text-sm text-muted-foreground mb-3">
+                <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                </svg>
+                An Giang, Việt Nam
+              </div>
+              <div class="flex gap-2 flex-wrap">
+                <span class="bg-growth-soft text-growth px-2 py-1 rounded text-xs font-medium">
+                  <svg class="w-3 h-3 mr-1 inline" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M3 3a1 1 0 000 2v8a2 2 0 002 2h2.586l-1.293 1.293a1 1 0 101.414 1.414L10 15.414l2.293 2.293a1 1 0 001.414-1.414L12.414 15H15a2 2 0 002-2V5a1 1 0 100-2H3zm11.707 4.707a1 1 0 00-1.414-1.414L10 9.586 8.707 8.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                  </svg>
+                  Cá Tra
+                </span>
+                <span class="bg-primary-soft text-primary px-2 py-1 rounded text-xs font-medium">
+                  <svg class="w-3 h-3 mr-1 inline" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                  </svg>
+                  8 tháng
+                </span>
+              </div>
+            </div>
+
+            <div class="grid grid-cols-2 gap-4 mb-4">
+              <div class="text-center p-3 bg-growth-soft rounded-lg">
+                <div class="text-2xl font-bold text-growth">1.18</div>
+                <div class="text-xs text-muted-foreground">FCR</div>
+              </div>
+              <div class="text-center p-3 bg-profit-soft rounded-lg">
+                <div class="text-2xl font-bold text-profit">44.3%</div>
+                <div class="text-xs text-muted-foreground">ROI</div>
+              </div>
+            </div>
+
+            <div class="space-y-2 text-sm">
+              <div class="flex justify-between">
+                <span class="text-muted-foreground">Diện tích:</span>
+                <span class="font-medium">25 hecta</span>
+              </div>
+              <div class="flex justify-between">
+                <span class="text-muted-foreground">Sản lượng:</span>
+                <span class="font-medium">450 tấn</span>
+              </div>
+              <div class="flex justify-between">
+                <span class="text-muted-foreground">Lợi nhuận:</span>
+                <span class="font-medium text-growth">8.2 tỷ VNĐ</span>
+              </div>
+            </div>
+
+            <button class="w-full mt-4 text-primary hover:bg-primary-soft px-4 py-2 rounded transition-colors">
+              Xem chi tiết
+              <svg class="w-4 h-4 ml-2 inline transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+              </svg>
+            </button>
+          </div>
+
+          <!-- Repeat for other case studies -->
+          <div class="case-study-card bg-card border border-border rounded-lg p-6 cursor-pointer transition-all duration-300 hover:shadow-lg hover:-translate-y-1" data-case="2">
+            <div class="mb-4">
+              <h3 class="text-xl font-semibold mb-2">Trang trại Cá Basa - Đồng Tháp</h3>
+              <div class="flex items-center text-sm text-muted-foreground mb-3">
+                <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                </svg>
+                Đồng Tháp, Việt Nam
+              </div>
+              <div class="flex gap-2 flex-wrap">
+                <span class="bg-growth-soft text-growth px-2 py-1 rounded text-xs font-medium">
+                  <svg class="w-3 h-3 mr-1 inline" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M3 3a1 1 0 000 2v8a2 2 0 002 2h2.586l-1.293 1.293a1 1 0 101.414 1.414L10 15.414l2.293 2.293a1 1 0 001.414-1.414L12.414 15H15a2 2 0 002-2V5a1 1 0 100-2H3zm11.707 4.707a1 1 0 00-1.414-1.414L10 9.586 8.707 8.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                  </svg>
+                  Cá Basa
+                </span>
+                <span class="bg-primary-soft text-primary px-2 py-1 rounded text-xs font-medium">
+                  <svg class="w-3 h-3 mr-1 inline" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                  </svg>
+                  7 tháng
+                </span>
+              </div>
+            </div>
+
+            <div class="grid grid-cols-2 gap-4 mb-4">
+              <div class="text-center p-3 bg-growth-soft rounded-lg">
+                <div class="text-2xl font-bold text-growth">1.15</div>
+                <div class="text-xs text-muted-foreground">FCR</div>
+              </div>
+              <div class="text-center p-3 bg-profit-soft rounded-lg">
+                <div class="text-2xl font-bold text-profit">51.5%</div>
+                <div class="text-xs text-muted-foreground">ROI</div>
+              </div>
+            </div>
+
+            <div class="space-y-2 text-sm">
+              <div class="flex justify-between">
+                <span class="text-muted-foreground">Diện tích:</span>
+                <span class="font-medium">18 hecta</span>
+              </div>
+              <div class="flex justify-between">
+                <span class="text-muted-foreground">Sản lượng:</span>
+                <span class="font-medium">320 tấn</span>
+              </div>
+              <div class="flex justify-between">
+                <span class="text-muted-foreground">Lợi nhuận:</span>
+                <span class="font-medium text-growth">6.8 tỷ VNĐ</span>
+              </div>
+            </div>
+
+            <button class="w-full mt-4 text-primary hover:bg-primary-soft px-4 py-2 rounded transition-colors">
+              Xem chi tiết
+              <svg class="w-4 h-4 ml-2 inline transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+              </svg>
+            </button>
+          </div>
+
+          <div class="case-study-card bg-card border border-border rounded-lg p-6 cursor-pointer transition-all duration-300 hover:shadow-lg hover:-translate-y-1" data-case="3">
+            <div class="mb-4">
+              <h3 class="text-xl font-semibold mb-2">Trang trại Cá Điêu Hồng - Cần Thơ</h3>
+              <div class="flex items-center text-sm text-muted-foreground mb-3">
+                <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                </svg>
+                Cần Thơ, Việt Nam
+              </div>
+              <div class="flex gap-2 flex-wrap">
+                <span class="bg-growth-soft text-growth px-2 py-1 rounded text-xs font-medium">
+                  <svg class="w-3 h-3 mr-1 inline" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M3 3a1 1 0 000 2v8a2 2 0 002 2h2.586l-1.293 1.293a1 1 0 101.414 1.414L10 15.414l2.293 2.293a1 1 0 001.414-1.414L12.414 15H15a2 2 0 002-2V5a1 1 0 100-2H3zm11.707 4.707a1 1 0 00-1.414-1.414L10 9.586 8.707 8.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                  </svg>
+                  Cá Điêu Hồng
+                </span>
+                <span class="bg-primary-soft text-primary px-2 py-1 rounded text-xs font-medium">
+                  <svg class="w-3 h-3 mr-1 inline" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                  </svg>
+                  10 tháng
+                </span>
+              </div>
+            </div>
+
+            <div class="grid grid-cols-2 gap-4 mb-4">
+              <div class="text-center p-3 bg-growth-soft rounded-lg">
+                <div class="text-2xl font-bold text-growth">1.22</div>
+                <div class="text-xs text-muted-foreground">FCR</div>
+              </div>
+              <div class="text-center p-3 bg-profit-soft rounded-lg">
+                <div class="text-2xl font-bold text-profit">54.2%</div>
+                <div class="text-xs text-muted-foreground">ROI</div>
+              </div>
+            </div>
+
+            <div class="space-y-2 text-sm">
+              <div class="flex justify-between">
+                <span class="text-muted-foreground">Diện tích:</span>
+                <span class="font-medium">12 hecta</span>
+              </div>
+              <div class="flex justify-between">
+                <span class="text-muted-foreground">Sản lượng:</span>
+                <span class="font-medium">280 tấn</span>
+              </div>
+              <div class="flex justify-between">
+                <span class="text-muted-foreground">Lợi nhuận:</span>
+                <span class="font-medium text-growth">9.1 tỷ VNĐ</span>
+              </div>
+            </div>
+
+            <button class="w-full mt-4 text-primary hover:bg-primary-soft px-4 py-2 rounded transition-colors">
+              Xem chi tiết
+              <svg class="w-4 h-4 ml-2 inline transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        <!-- Detailed View Container -->
+        <div id="case-detail-container" class="hidden">
+          <div class="bg-card border border-border rounded-lg p-8 animate-scale-in">
+            <div id="case-detail-content"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Technical Library Section -->
+    <section id="technical-library" class="py-20 bg-background">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl font-bold mb-6">Thư viện Kỹ thuật Chuyên sâu</h2>
+          <p class="text-xl text-muted-foreground max-w-3xl mx-auto">
+            Tiết kiệm thời gian nghiên cứu với bộ tài liệu kỹ thuật hoàn chỉnh nhất ngành thủy sản
+          </p>
+        </div>
+        
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div class="bg-card rounded-lg p-6 border hover:shadow-lg transition-shadow">
+            <h3 class="text-xl font-semibold mb-4 text-primary">Hướng dẫn Tối ưu FCR</h3>
+            <ul class="space-y-2 text-muted-foreground mb-6">
+              <li>• Công thức dinh dưỡng theo từng giai đoạn</li>
+              <li>• Lịch cho ăn tối ưu 24/7</li>
+              <li>• Giám sát và điều chỉnh realtime</li>
+            </ul>
+            <button class="bg-primary text-primary-foreground px-4 py-2 rounded hover:bg-primary/90">
+              Tải PDF (2.5MB)
+            </button>
+          </div>
+          
+          <div class="bg-card rounded-lg p-6 border hover:shadow-lg transition-shadow">
+            <h3 class="text-xl font-semibold mb-4 text-growth">Tiêu chuẩn Chất lượng</h3>
+            <ul class="space-y-2 text-muted-foreground mb-6">
+              <li>• ISO 22000:2018 & HACCP</li>
+              <li>• Quy trình kiểm định 47 chỉ tiêu</li>
+              <li>• Certificate từ SGS & Vinacert</li>
+            </ul>
+            <button class="bg-growth text-growth-foreground px-4 py-2 rounded hover:bg-growth/90">
+              Tải PDF (1.8MB)
+            </button>
+          </div>
+          
+          <div class="bg-card rounded-lg p-6 border hover:shadow-lg transition-shadow">
+            <h3 class="text-xl font-semibold mb-4 text-profit">Quản lý Môi trường Nước</h3>
+            <ul class="space-y-2 text-muted-foreground mb-6">
+              <li>• Công nghệ Biofloc và RAS</li>
+              <li>• Giám sát pH, DO, NH3 tự động</li>
+              <li>• Phòng ngừa bệnh hiệu quả 99%</li>
+            </ul>
+            <button class="bg-profit text-profit-foreground px-4 py-2 rounded hover:bg-profit/90">
+              Tải PDF (3.1MB)
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Continue with other sections... -->
+    <!-- Factory Video Section -->
+    <section id="factory-video" class="py-20 bg-muted">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl font-bold mb-6">Video Quy trình Sản xuất & Năng lực Nhà máy</h2>
+          <p class="text-xl text-muted-foreground max-w-3xl mx-auto">
+            Minh bạch 100% quy trình sản xuất với công nghệ châu Âu hàng đầu
+          </p>
+        </div>
+        
+        <div class="grid lg:grid-cols-2 gap-12 items-center">
+          <div class="space-y-6">
+            <div class="bg-background rounded-lg p-6 border">
+              <h3 class="text-2xl font-semibold mb-4 text-primary">Dây chuyền Sản xuất Tự động</h3>
+              <ul class="space-y-3 text-muted-foreground">
+                <li class="flex items-center"><span class="w-2 h-2 bg-growth rounded-full mr-3"></span>Công suất 50,000 tấn/năm</li>
+                <li class="flex items-center"><span class="w-2 h-2 bg-growth rounded-full mr-3"></span>Hệ thống trộn chính xác ±0.1%</li>
+                <li class="flex items-center"><span class="w-2 h-2 bg-growth rounded-full mr-3"></span>Kiểm soát nhiệt độ tự động</li>
+                <li class="flex items-center"><span class="w-2 h-2 bg-growth rounded-full mr-3"></span>Đóng gói vacuum kín khí</li>
+              </ul>
+            </div>
+            
+            <div class="bg-background rounded-lg p-6 border">
+              <h3 class="text-2xl font-semibold mb-4 text-profit">Kiểm định Chất lượng</h3>
+              <ul class="space-y-3 text-muted-foreground">
+                <li class="flex items-center"><span class="w-2 h-2 bg-profit rounded-full mr-3"></span>Lab tiêu chuẩn quốc tế</li>
+                <li class="flex items-center"><span class="w-2 h-2 bg-profit rounded-full mr-3"></span>47 chỉ tiêu phân tích</li>
+                <li class="flex items-center"><span class="w-2 h-2 bg-profit rounded-full mr-3"></span>Truy xuất nguồn gốc 100%</li>
+              </ul>
+            </div>
+          </div>
+          
+          <div class="relative">
+            <div class="aspect-video bg-gradient-to-br from-primary/20 to-growth/20 rounded-lg flex items-center justify-center border-2 border-dashed border-border">
+              <div class="text-center">
+                <div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-4">
+                  <svg class="w-8 h-8 text-primary-foreground" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M8 5v14l11-7z"/>
+                  </svg>
+                </div>
+                <h4 class="text-lg font-semibold mb-2">Video Tour Nhà máy</h4>
+                <p class="text-sm text-muted-foreground">Flycam 4K toàn cảnh quy trình</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Continue implementing remaining sections following the same pattern... -->
+    
+    <!-- Footer -->
+    <footer class="bg-foreground text-background py-16">
+      <div class="container mx-auto px-4">
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div>
+            <div class="text-2xl font-bold text-primary mb-4">KINGBULL</div>
+            <p class="text-sm opacity-90 mb-6">
+              Nhà cung cấp thức ăn thủy sản chất lượng cao, hỗ trợ trang trại đạt hiệu quả nuôi tối ưu.
+            </p>
+            <div class="space-y-2 text-sm">
+              <p><strong>CÔNG TY TNHH KINGBULL VIỆT NAM</strong></p>
+              <p>MST: 1801608521</p>
+            </div>
+          </div>
+          
+          <div>
+            <h4 class="font-semibold mb-4">Liên hệ</h4>
+            <div class="space-y-2 text-sm opacity-90">
+              <p>Tầng 6, số 41, Cách Mạng Tháng Tám</p>
+              <p>Phường Cái Khế, TP Cần Thơ, Việt Nam</p>
+              <p>Email: admin@kingbull.com.vn</p>
+              <p>Hotline: 058.708.5649</p>
+            </div>
+          </div>
+          
+          <div>
+            <h4 class="font-semibold mb-4">Sản phẩm</h4>
+            <ul class="space-y-2 text-sm opacity-90">
+              <li>Thức ăn cá tra</li>
+              <li>Thức ăn cá basa</li>
+              <li>Thức ăn cá điêu hồng</li>
+              <li>Thức ăn tôm sú</li>
+              <li>Thức ăn tôm thẻ</li>
+            </ul>
+          </div>
+          
+          <div>
+            <h4 class="font-semibold mb-4">Dịch vụ</h4>
+            <ul class="space-y-2 text-sm opacity-90">
+              <li>Tư vấn kỹ thuật</li>
+              <li>Hỗ trợ 24/7</li>
+              <li>Đào tạo nuôi trồng</li>
+              <li>Logistics toàn quốc</li>
+              <li>Hợp tác R&D</li>
+            </ul>
+          </div>
+        </div>
+        
+        <div class="border-t border-background/20 mt-12 pt-8 text-center text-sm opacity-90">
+          <p>&copy; 2024 KingBull Việt Nam. Bảo lưu mọi quyền.</p>
+        </div>
+      </div>
+    </footer>
+  </main>
+
+  <!-- Load external libraries -->
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  
+  <!-- Load app scripts -->
+  <script src="./js/data.js"></script>
+  <script src="./js/app.js"></script>
+</body>
 </html>
