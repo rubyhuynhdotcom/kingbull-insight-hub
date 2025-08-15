@@ -1,73 +1,94 @@
-# Welcome to your Lovable project
+# KingBull Insight Hub
 
-## Project info
+KingBull Việt Nam - Thức ăn Thủy sản Chất lượng Cao | Đột phá tăng trưởng, dẫn đầu lợi nhuận
 
-**URL**: https://lovable.dev/projects/83544f38-c39d-4e0f-a1d2-198c21874f6e
+## Quick Setup & Deploy
 
-## How can I edit this code?
+### For Lovable Users
+1. **Connect** → Connect your GitHub account
+2. **Run** → Click run to preview locally  
+3. **Publish** → Deploy to GitHub Pages with one click
 
-There are several ways of editing your application.
+### For GitHub Pages Deployment
 
-**Use Lovable**
+The project is pre-configured for GitHub Pages deployment:
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/83544f38-c39d-4e0f-a1d2-198c21874f6e) and start prompting.
+- **Auto Base Detection**: Automatically sets the correct base path for production
+- **SPA Routing**: Includes 404.html and .nojekyll for client-side routing
+- **Zero Config**: No manual setup required
 
-Changes made via Lovable will be committed automatically to this repo.
-
-**Use your preferred IDE**
-
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
+#### Manual Deploy Steps:
+```bash
+npm install
+npm run build
+# Push to GitHub - Pages will deploy from docs/ folder
 ```
 
-**Edit a file directly in GitHub**
+#### Scripts Available:
+```bash
+npm run dev          # Start development server
+npm run build        # Build for production (with postbuild script)
+npm run build:dev    # Build for development 
+npm run preview      # Preview production build
+npm run lint         # Run ESLint
+```
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+**Note**: You need to update package.json scripts to:
+```json
+{
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build && node scripts/postbuild-spa-404.cjs",
+    "preview": "vite preview",
+    "build:dev": "vite build --mode development",
+    "lint": "eslint ."
+  }
+}
+```
 
-**Use GitHub Codespaces**
+#### Custom Domain Setup:
+If using a custom domain, add `docs/CNAME` file with your domain and set base to `"/"` in vite.config.ts.
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+### Technologies Used
 
-## What technologies are used for this project?
+- **Vite** - Fast build tool and dev server
+- **React 18** - UI library with hooks and modern patterns  
+- **TypeScript** - Type safety and enhanced developer experience
+- **Tailwind CSS** - Utility-first CSS framework with custom design system
+- **shadcn/ui** - High-quality, accessible React components
 
-This project is built with:
+### Project Structure
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+```
+src/
+├── components/         # Reusable UI components
+│   ├── ui/            # shadcn/ui components
+│   ├── Navbar.tsx     # Navigation component
+│   ├── HeroSection.tsx # Hero banner
+│   └── CaseStudiesSection.tsx # Case studies
+├── pages/             # Page components
+├── hooks/             # Custom React hooks
+├── lib/               # Utility functions
+├── assets/            # Images and media
+└── index.css          # Global styles and design tokens
+```
 
-## How can I deploy this project?
+### Design System
 
-Simply open [Lovable](https://lovable.dev/projects/83544f38-c39d-4e0f-a1d2-198c21874f6e) and click on Share -> Publish.
+The project uses a semantic design system with HSL color tokens:
 
-## Can I connect a custom domain to my Lovable project?
+- **Primary Blue**: `hsl(var(--primary))` - #0EA4E8
+- **Growth Green**: `hsl(var(--growth))` - #2BCB53  
+- **Profit Gold**: `hsl(var(--profit))` - #FFBE00
 
-Yes, you can!
+All components use semantic tokens for consistent theming and easy customization.
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+## Live Site
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+Visit the deployed site: [https://rubyhuynhdotcom.github.io/kingbull-insight-hub/](https://rubyhuynhdotcom.github.io/kingbull-insight-hub/)
+
+---
+
+## Original Lovable Project Info
+
+**Lovable URL**: https://lovable.dev/projects/83544f38-c39d-4e0f-a1d2-198c21874f6e
