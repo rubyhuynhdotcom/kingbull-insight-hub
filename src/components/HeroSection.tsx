@@ -36,24 +36,23 @@ const HeroSection: React.FC<HeroSectionProps> = ({ onSectionChange }) => {
           alt="KingBull Aquafarm Success"
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-primary/90 via-primary/70 to-transparent"></div>
-        <div className="absolute inset-0 bg-gradient-to-t from-background/30 to-transparent"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-primary/90 via-primary/60 to-primary/20"></div>
       </div>
 
       {/* Content */}
       <div className="relative z-10 container mx-auto px-4 py-20">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+        <div className="grid lg:grid-cols-2 gap-12 items-center min-h-[80vh]">
           {/* Left Content */}
           <div className="text-white space-y-8">
-            <div className="space-y-4">
+            <div className="space-y-6">
               <div className="inline-flex items-center bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-4 py-2 text-sm font-medium">
                 <Shield className="w-4 h-4 mr-2" />
                 Tin cậy từ các trang trại hàng đầu Việt Nam
               </div>
               
               <h1 className="text-5xl lg:text-7xl font-bold leading-tight">
-                <span className="block">KINGBULL</span>
-                <span className="block text-profit bg-gradient-to-r from-profit to-growth bg-clip-text text-transparent">
+                <span className="block text-white">KINGBULL</span>
+                <span className="block text-profit">
                   VIỆT NAM
                 </span>
               </h1>
@@ -73,7 +72,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ onSectionChange }) => {
               <Button 
                 size="lg"
                 onClick={() => onSectionChange('case-studies')}
-                className="bg-growth hover:bg-growth/90 text-growth-foreground shadow-lg hover:shadow-xl transition-all duration-300 text-lg px-8 py-6"
+                className="bg-growth hover:bg-growth/90 text-growth-foreground shadow-lg hover:shadow-xl transition-all duration-300 text-base px-8 py-4"
               >
                 Xem Hồ sơ Dự án Thành công
                 <ArrowRight className="w-5 h-5 ml-2" />
@@ -83,7 +82,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ onSectionChange }) => {
                 size="lg"
                 variant="outline"
                 onClick={() => onSectionChange('support')}
-                className="border-white/30 text-white hover:bg-white/10 backdrop-blur-sm text-lg px-8 py-6"
+                className="border-white text-white hover:bg-white/10 backdrop-blur-sm text-base px-8 py-4"
               >
                 Liên hệ Hợp tác
               </Button>
@@ -93,27 +92,24 @@ const HeroSection: React.FC<HeroSectionProps> = ({ onSectionChange }) => {
           {/* Right Content - Benefits */}
           <div className="space-y-6">
             {benefits.map((benefit, index) => (
-              <Card 
+              <div 
                 key={index}
-                className="p-6 bg-white/10 backdrop-blur-sm border-white/20 text-white hover:bg-white/20 transition-all duration-300 interactive-card"
-                style={{ animationDelay: `${index * 0.2}s` }}
+                className="flex items-start space-x-4 p-6 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg hover:bg-white/20 transition-all duration-300"
               >
-                <div className="flex items-start space-x-4">
-                  <div className="flex-shrink-0">
-                    <div className="w-12 h-12 bg-profit rounded-xl flex items-center justify-center">
-                      <benefit.icon className="w-6 h-6 text-profit-foreground" />
-                    </div>
-                  </div>
-                  <div className="flex-1">
-                    <h3 className="text-xl font-semibold mb-2">{benefit.title}</h3>
-                    <p className="text-white/80 leading-relaxed">{benefit.description}</p>
+                <div className="flex-shrink-0">
+                  <div className="w-12 h-12 bg-profit rounded-xl flex items-center justify-center">
+                    <benefit.icon className="w-6 h-6 text-profit-foreground" />
                   </div>
                 </div>
-              </Card>
+                <div className="flex-1">
+                  <h3 className="text-xl font-semibold mb-2 text-white">{benefit.title}</h3>
+                  <p className="text-white/80 leading-relaxed">{benefit.description}</p>
+                </div>
+              </div>
             ))}
 
             {/* Quick Stats */}
-            <Card className="p-6 bg-gradient-to-r from-growth/90 to-profit/90 backdrop-blur-sm border-white/20 text-white">
+            <div className="p-6 bg-gradient-to-r from-growth to-profit/80 backdrop-blur-sm border border-white/20 rounded-lg text-white">
               <div className="grid grid-cols-3 gap-4 text-center">
                 <div>
                   <div className="text-2xl font-bold">500+</div>
@@ -128,15 +124,8 @@ const HeroSection: React.FC<HeroSectionProps> = ({ onSectionChange }) => {
                   <div className="text-sm opacity-90">Tăng lợi nhuận</div>
                 </div>
               </div>
-            </Card>
+            </div>
           </div>
-        </div>
-      </div>
-
-      {/* Scroll Indicator */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-        <div className="w-6 h-10 border-2 border-white/50 rounded-full flex justify-center">
-          <div className="w-1 h-3 bg-white/70 rounded-full mt-2 animate-pulse"></div>
         </div>
       </div>
     </section>
