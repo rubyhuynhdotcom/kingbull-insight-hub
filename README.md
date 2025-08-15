@@ -1,73 +1,82 @@
-# Welcome to your Lovable project
+# KINGBULL Insight Hub - Static Export
 
-## Project info
+Static HTML/CSS/JS build for GitHub Pages deployment.
 
-**URL**: https://lovable.dev/projects/83544f38-c39d-4e0f-a1d2-198c21874f6e
+## 📁 Structure
 
-## How can I edit this code?
-
-There are several ways of editing your application.
-
-**Use Lovable**
-
-Simply visit the [Lovable Project](https://lovable.dev/projects/83544f38-c39d-4e0f-a1d2-198c21874f6e) and start prompting.
-
-Changes made via Lovable will be committed automatically to this repo.
-
-**Use your preferred IDE**
-
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
+```
+/
+├── index.html          # Main page
+├── 404.html           # SPA redirect
+├── .nojekyll          # Disable Jekyll
+├── css/
+│   └── styles.css     # Compiled styles
+├── js/
+│   └── app.js         # Vanilla JavaScript
+└── assets/
+    ├── favicon.svg    # Site icon
+    └── hero-aquafarm.jpg # Hero image
 ```
 
-**Edit a file directly in GitHub**
+## 🚀 Deploy to GitHub Pages
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+### Method 1: Direct Upload
+1. Upload all files to your repo root
+2. Go to Settings → Pages
+3. Source: Deploy from a branch
+4. Branch: main / folder: / (root)
 
-**Use GitHub Codespaces**
+### Method 2: Git Commands
+```bash
+git add .
+git commit -m "Deploy static build for GH Pages"
+git push origin main
+```
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+## ✅ Compatibility
 
-## What technologies are used for this project?
+- ✅ Pure HTML/CSS/JS (no bundler runtime)
+- ✅ Relative paths only
+- ✅ Works with `file://` protocol
+- ✅ Mobile responsive
+- ✅ SPA routing with 404.html redirect
+- ✅ GitHub Pages optimized
 
-This project is built with:
+## 🎯 Features
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+- Interactive case studies with detailed breakdowns
+- Technical library section
+- Factory video showcase
+- Dealer portal information
+- Supply map visualization
+- 24/7 support contact forms
+- Smooth scroll navigation
+- Mobile-first responsive design
 
-## How can I deploy this project?
+## 📱 Browser Support
 
-Simply open [Lovable](https://lovable.dev/projects/83544f38-c39d-4e0f-a1d2-198c21874f6e) and click on Share -> Publish.
+- Chrome/Safari/Firefox/Edge (modern browsers)
+- Mobile Safari/Chrome
+- Internet Explorer 11+ (with polyfills)
 
-## Can I connect a custom domain to my Lovable project?
+## 🔧 Customization
 
-Yes, you can!
+Edit files directly:
+- `index.html` - Content structure
+- `css/styles.css` - Styling and design system
+- `js/app.js` - Interactive functionality
+- `assets/` - Images and media
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+## 📈 Performance
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+- Optimized CSS (single file)
+- Vanilla JS (no frameworks)
+- Compressed images
+- Minimal HTTP requests
+- Fast loading on all devices
+
+---
+
+**Live URL:** `https://[username].github.io/[repo-name]/`
+
+Built for KingBull Việt Nam - Premium Aquaculture Feed Solutions

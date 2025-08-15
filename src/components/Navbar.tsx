@@ -11,7 +11,7 @@ const Navbar: React.FC<NavbarProps> = ({ activeSection, onSectionChange }) => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const navItems = [
-    { id: 'home', label: 'Trang chủ', active: true },
+    { id: 'home', label: 'Trang chủ' },
     { id: 'case-studies', label: 'Dự án Thành công' },
     { id: 'technical-library', label: 'Thư viện Kỹ thuật' },
     { id: 'factory-video', label: 'Năng lực Sản xuất' },
@@ -24,7 +24,7 @@ const Navbar: React.FC<NavbarProps> = ({ activeSection, onSectionChange }) => {
   ];
 
   return (
-    <nav className="fixed top-0 left-0 right-0 bg-white/95 backdrop-blur-sm border-b border-border z-50 shadow-sm">
+    <nav className="fixed top-0 left-0 right-0 bg-background/95 backdrop-blur-sm border-b border-border z-50">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
@@ -35,35 +35,34 @@ const Navbar: React.FC<NavbarProps> = ({ activeSection, onSectionChange }) => {
           </div>
 
           {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center space-x-6">
+          <div className="hidden lg:flex items-center space-x-1">
             {navItems.map((item) => (
-              <button
+              <Button
                 key={item.id}
+                variant={activeSection === item.id ? 'default' : 'ghost'}
+                size="sm"
                 onClick={() => onSectionChange(item.id)}
-                className={`text-sm font-medium transition-all duration-200 hover:text-primary relative ${
+                className={`text-sm font-medium transition-all duration-200 ${
                   activeSection === item.id 
-                    ? 'text-primary' 
-                    : 'text-foreground'
+                    ? 'bg-primary text-primary-foreground shadow-sm' 
+                    : 'hover:bg-accent text-foreground'
                 }`}
               >
                 {item.label}
-                {activeSection === item.id && (
-                  <div className="absolute -bottom-4 left-0 right-0 h-0.5 bg-primary rounded-full"></div>
-                )}
-              </button>
+              </Button>
             ))}
           </div>
 
           {/* Contact Info & Mobile Menu */}
           <div className="flex items-center space-x-3">
-            <div className="hidden md:flex items-center space-x-4 text-sm text-muted-foreground">
+            <div className="hidden md:flex items-center space-x-3 text-sm text-muted-foreground">
               <div className="flex items-center space-x-1">
                 <Phone className="w-4 h-4" />
                 <span>058.708.5649</span>
               </div>
               <div className="flex items-center space-x-1">
                 <Mail className="w-4 h-4" />
-                <span>admin</span>
+                <span>admin@kingbull.com.vn</span>
               </div>
             </div>
             
