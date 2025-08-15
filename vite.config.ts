@@ -2,15 +2,12 @@ import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react-swc";
 import path from "path";
 import { componentTagger } from "lovable-tagger";
-// @ts-ignore - Node ESM import for package.json
-import pkg from "./package.json" assert { type: "json" };
 
 export default defineConfig(({ mode }) => {
   const isProd = mode === "production";
-  // Tự lấy tên repo từ env hoặc package.json; fallback là tên repo thật: kingbull-insight-hub
-  const repo =
-    (process.env.VITE_GH_PAGES_BASE || pkg?.name || "kingbull-insight-hub")
-      .replace(/^\/|\/$/g, "");
+  // Tự động phát hiện tên repo từ env hoặc fallback là kingbull-insight-hub
+  const repo = (process.env.VITE_GH_PAGES_BASE || "kingbull-insight-hub")
+    .replace(/^\/|\/$/g, "");
 
   return {
     base: isProd ? `/${repo}/` : "/",
